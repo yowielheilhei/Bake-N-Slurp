@@ -1,0 +1,15 @@
+/* contact.css */
+.contact-container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; margin-top: 40px; margin-bottom: 60px; }
+.contact-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+.info-box { background: rgba(255, 255, 255, 0.9); padding: 25px 15px; border-radius: 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.map-placeholder img { width: 100%; height: 250px; object-fit: cover; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.contact-form { background: rgba(255, 255, 255, 0.9); padding: 40px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.contact-form h3 { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 10px; }
+.contact-form > p { margin-bottom: 20px; font-size: 0.9rem; color: #555; }
+.form-group { margin-bottom: 20px; }
+.form-group input, .form-group textarea { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px; background: #f9f9f9; font-family: var(--font-body); }
+.send-btn { width: 100%; padding: 15px; background: #d4d4d4; border: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: background 0.3s; }
+.send-btn:hover { background: #bbb; }
+
+@media (max-width: 768px) { .contact-container { grid-template-columns: 1fr; } .contact-info-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .contact-info-grid { grid-template-columns: 1fr; } }
