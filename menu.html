@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Menu | Bake 'n Slurp</title>
-        <link rel="stylesheet" href="global.css">
-        <link rel="stylesheet" href="menu.css">
-        <script src="components.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Bake 'n Slurp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="menu.css">
+    <script src="components.js"></script>
+    
+    <script src="menu.js"></script>
+</head>
 <body>
     <bake-header></bake-header>
+    
     <main class="container">
         <div class="banner">
             <img src="images/menu-banner.jpg" alt="Products">
@@ -19,28 +24,27 @@
             <aside class="sidebar">
                 <h3>Menu</h3>
                 <p>PRODUCT CAT</p>
-                <ul>
-                    <li class="active">Cakes</li>
-                    <li>Sandwiches</li>
-                    <li>Treats</li>
-                    <li>Drinks</li>
+                <ul id="category-list">
+                    <li class="active" data-category="all">All Products</li>
+                    <li data-category="cakes">Cakes</li>
+                    <li data-category="sandwiches">Sandwiches</li>
+                    <li data-category="treats">Treats</li>
+                    <li data-category="drinks">Drinks</li>
                 </ul>
             </aside>
 
             <section class="menu-content">
                 <div class="menu-header">
-                    <h2>Cakes</h2>
-                    <input type="text" placeholder="Search" class="search-bar">
+                    <h2 id="category-title">All Products</h2>
+                    <input type="text" id="search-input" placeholder="Search" class="search-bar">
                 </div>
-                <div class="product-grid">
-                    <div class="product-item">
-                        <img src="images/cake1.jpg" alt="Product">
-                        <p>Carrot Cake</p>
-                    </div>
-                    </div>
+                
+                <div class="product-grid" id="product-grid"></div>
+                
             </section>
         </div>
     </main>
+    
     <bake-footer></bake-footer>
-    </body>
+</body>
 </html>

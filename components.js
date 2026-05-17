@@ -6,11 +6,11 @@ class BakeHeader extends HTMLElement {
         this.innerHTML = `
         <header>
             <div class="logo">
-                <img src="images/logo.png" alt="Bake 'n Slurp Logo">
+                <img src="assets/images/navigationbar/bakenslurplogoblack.png" alt="Bake 'n Slurp Logo">
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Index.html">Home</a></li>
                     <li><a href="our-story.html">Our Story</a></li>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -33,7 +33,7 @@ class BakeFooter extends HTMLElement {
         <footer>
             <div class="container footer-grid">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="Bake 'n Slurp">
+                    <img src="assets/images/footer/bakenslurplogoblack.png" alt="Bake 'n Slurp">
                 </div>
                 <div>
                     <h4>Quick Links</h4>
