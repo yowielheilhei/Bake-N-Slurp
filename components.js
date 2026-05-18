@@ -67,3 +67,12 @@ class BakeFooter extends HTMLElement {
 }
 // Register the new HTML tag
 customElements.define('bake-footer', BakeFooter);
+
+window.addEventListener('load', function() {
+    const loader = document.getElementById('page-loader');
+    
+    if (loader) {
+        // Add the CSS class that fades the loader out
+        loader.classList.add('loader-hidden');
+    }
+});

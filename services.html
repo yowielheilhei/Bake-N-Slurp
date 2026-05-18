@@ -8,21 +8,37 @@
         <script src="components.js"></script>
     </head>
 <body>
-    <bake-header></bake-header>
-    <main class="container">
-        <div class="banner">
-            <img src="images/services-hero.jpg" alt="Services">
-            <h2>Services</h2>
-        </div>
 
-        <div class="grid-3">
-            <div class="card">
-                <img src="images/service1.jpg" alt="Service">
-                <h3>Custom Cakes</h3>
-                <p style="padding: 10px; font-size: 0.9rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <div id="page-loader" class="loader-container">
+        <div class="spinner"></div>
+    </div>
+    <bake-header></bake-header>
+    <main>
+        <section class="services-hero">
+            <img src="assets/images/services/bannerpngservices.png" alt="Services Background">
+            <h1>SERVICES</h1>
+        </section>
+
+        <section class="services-container">
+            <div class="services-grid" id="services-grid"></div>
+        </section>
+        
+        <div id="serviceModal" class="modal">
+          <div class="modal-content">
+            <span class="close-modal">&#8617;</span>
+            
+            <div id="modal-body">
+                <img id="modal-img" src="" alt="Service Image">
+                <h2 id="modal-title">Service</h2>
+                <div id="modal-desc"></div>
+                <a href="contact.html" class="contact-btn">Contact Us</a>
             </div>
-            </div>
+          </div>
+        </div>
     </main>
+    
     <bake-footer></bake-footer>
-    </body>
+
+    <script src="services.js"></script>
+</body>
 </html>

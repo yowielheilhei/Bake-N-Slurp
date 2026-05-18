@@ -1,13 +1,13 @@
 // 1. Your Product Database
 // Add or edit all your products right here!
 const products = [
-    { name: "Carrot Cake", category: "cakes", image: "images/cake1.jpg" },
-    { name: "Chocolate Cake", category: "cakes", image: "images/cake1.jpg" }, // Use actual images later
-    { name: "Ham and Cheese Sandwich", category: "sandwiches", image: "images/sandwich1.jpg" },
-    { name: "Turkey and Avocado Sandwich", category: "sandwiches", image: "images/sandwich2.jpg" },
-    { name: "BLT Sandwich", category: "sandwiches", image: "images/sandwich3.jpg" },
-    { name: "Chocolate Chip Cookie", category: "treats", image: "images/cake1.jpg" },
-    { name: "Strawberry Milk", category: "drinks", image: "images/cake1.jpg" }
+    { name: "Carrot Cake", category: "cakes", image: "assets/images/services/service1.jpg" },
+    { name: "Chocolate Cake", category: "cakes", image: "assets/images/services/service2.jpg" }, // Use actual images later
+    { name: "Ham and Cheese Sandwich", category: "sandwiches", image: "assets/images/services/service3.jpg" },
+    { name: "Turkey and Avocado Sandwich", category: "sandwiches", image: "assets/images/services/service4.jpg" },
+    { name: "BLT Sandwich", category: "sandwiches", image: "assets/images/services/service5.jpg" },
+    { name: "Chocolate Chip Cookie", category: "treats", image: "assets/images/services/service6.jpg" },
+    { name: "Strawberry Milk", category: "drinks", image: "assets/images/services/service7.jpg" }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Function to display products on the screen
     function renderProducts(items) {
         productGrid.innerHTML = ''; // Clear the grid first
-        
         if (items.length === 0) {
             productGrid.innerHTML = '<p style="grid-column: 1 / -1;">No products found.</p>';
             return;
