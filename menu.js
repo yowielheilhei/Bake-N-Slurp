@@ -81,3 +81,67 @@ document.addEventListener('DOMContentLoaded', () => {
         renderProducts(filtered);
     });
 });
+
+
+/**
+ * menu.js
+ * Handles the full-screen product popups
+ */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("productModal");
+    const closeBtn = document.querySelector(".close-prod-modal");
+    const modalImg = document.getElementById("prod-modal-img");
+    const modalTitle = document.getElementById("prod-modal-title");
+    const modalDesc = document.getElementById("prod-modal-desc");
+
+    // 1. Your Database of Descriptions! 
+    // Just type the exact name of your product, and the text you want to appear.
+    const PRODUCT_DESCRIPTIONS = {
+        "Red Velvet Cake": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+        "Spanish Bread": "Our signature Spanish Bread is perfectly sweet, buttery, and melts in your mouth. Baked fresh every single morning.",
+        "Pandesal": "The classic breakfast staple. Soft, fluffy, and best paired with a hot cup of coffee.",
+        
+        // If a product doesn't have a specific description above, it will use this one:
+        "Default": "A delicious, freshly baked treat made with love at Bake 'n Slurp. Click the button below to secure your order!"
+    };
+
+    // 2. Find every product on your menu page
+    // (This assumes your menu grid items have the class "product-item")
+    const products = document.querySelectorAll(".product-item");
+
+    products.forEach(product => {
+        // Change the mouse to a pointer so people know they can click it
+        product.style.cursor = "pointer"; 
+
+        product.addEventListener("click", function () {
+            // Grab the image and title from the specific product you clicked
+            const imgSrc = this.querySelector("img").src;
+            
+            // Assuming your product titles are inside an <h4>, <h3>, or <p> tag inside the grid item
+            const titleElement = this.querySelector("h4") || this.querySelector("h3") || this.querySelector("p");
+            const titleText = titleElement ? titleElement.innerText : "Delicious Treat";
+
+            // Put the image and title into the popup
+            modalImg.src = imgSrc;
+            modalTitle.innerText = titleText;
+
+            // Look up the description in our database above
+            if (PRODUCT_DESCRIPTIONS[titleText]) {
+                modalDesc.innerText = PRODUCT_DESCRIPTIONS[titleText];
+            } else {
+                modalDesc.innerText = PRODUCT_DESCRIPTIONS["Default"];
+            }
+
+            // Open the modal and lock the background screen
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden"; 
+        });
+    });
+
+    // 3. Close the modal when the back arrow is clicked
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    });
+});

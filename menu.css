@@ -19,7 +19,6 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    
     height: 400px; 
     margin-bottom: 40px;
     
@@ -119,3 +118,119 @@
     .search-bar { width: 100%; }
 }
 @media (max-width: 480px) { .product-grid { grid-template-columns: 1fr 1fr; } }
+
+
+/* =========================================
+   Product Popup Styles
+   ========================================= */
+.prod-modal {
+    display: none; 
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Soft light gray gradient background */
+    background: linear-gradient(to bottom, #d8d8d8, #a8a8a8);
+    overflow-y: auto;
+}
+
+/* The dark top bar */
+.prod-modal-topbar {
+    width: 100%;
+    height: 60px;
+    background-color: #555; /* Dark gray */
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.close-prod-modal {
+    color: white;
+    font-size: 35px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.close-prod-modal:hover {
+    transform: scale(1.2);
+}
+
+/* Side-by-side layout container */
+/* Side-by-side layout container with strict dimensions */
+.prod-modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    /* --- YOUR NEW STRICT DIMENSIONS --- */
+    width: 1000px;
+    height: 800px;
+    /* Safety net so it still works on mobile screens */
+    max-width: 95%; 
+    
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.prod-modal-left, .prod-modal-right {
+    flex: 1;
+}
+
+.prod-modal-left img {
+    width: 100%;
+    max-width: 450px;
+    /* Force the image to be taller to match your new 800px popup height! */
+    height: 600px; 
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    object-fit: cover;
+}
+
+.prod-modal-right h2 {
+    font-family: var(--font-body, 'Poppins', sans-serif);
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.prod-modal-right p {
+    font-family: var(--font-body, 'Poppins', sans-serif);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+/* The dark gray Contact button */
+.prod-contact-btn {
+    display: inline-block;
+    background-color: #5a5a5a;
+    color: #fff;
+    padding: 12px 40px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-body, 'Poppins', sans-serif);
+    transition: background 0.3s;
+}
+
+.prod-contact-btn:hover {
+    background-color: #333;
+}
+
+/* Stacks neatly on mobile phones */
+@media (max-width: 768px) {
+    .prod-modal-container {
+        flex-direction: column;
+        margin: 20px auto;
+        text-align: center;
+        gap: 30px;
+    }
+    .prod-modal-right h2 {
+        font-size: 2.5rem;
+    }
+}
