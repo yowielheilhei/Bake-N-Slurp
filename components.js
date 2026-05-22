@@ -33,7 +33,7 @@ class BakeFooter extends HTMLElement {
         <footer>
             <div class="container footer-grid">
                 <div class="footer-logo">
-                    <img src="assets/images/footer/bakenslurplogoblack.png" alt="Bake 'n Slurp">
+                    <img src="assets/images/footer/bakanslurpwhite.png" alt="Bake 'n Slurp">
                 </div>
                 <div>
                     <h4>Quick Links</h4>

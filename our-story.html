@@ -1,57 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Menu | Bake 'n Slurp</title>
-        <link rel="stylesheet" href="global.css">
-        <link rel="stylesheet" href="our-story.css">
-        <script src="components.js"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | Bake 'n Slurp</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="our-story.css">
+    <script src="components.js"></script>
+</head>
 <body>
 
     <div id="page-loader" class="loader-container">
         <div class="spinner"></div>
     </div>
+
     <bake-header></bake-header>
-    <main class="container">
-        <div class="banner">
-            <img src="images/story-collage-banner.jpg" alt="Our Story Collage">
-            <h2>Our Story</h2>
+
+    <main>
+        <section class="story-hero">
+            <img src="assets/images/backgroundpicture/ourstorybanner.png" alt="Our Story Collage">
+        </section>
+        <div class="story-container">
+
+            <section class="story-section">
+                <div class="story-content">
+                    <h3>Our Journey to Bake 'n Slurp</h3>
+                    <p>Our path wasn't a straight line. We started at home with a beverage concept called "D'stressitea," hoping to offer the same comfort I found in food to others. When that struggled to gain traction online, we didn't give up. We pivoted to bottling "Korean Fruit Milk," selling it to tourists who gave us the beautiful feedback we needed to keep going.</p>
+                    <a href="#" class="continue-btn">Continue Reading &rarr;</a>
+                </div>
+                <div class="story-image">
+                    <img src="assets/images/ourstory/howwestarted.png" alt="Mobile Shop">
+                </div>
+            </section>
+
+            <section class="story-section reverse">
+                <div class="story-content">
+                    <h3>How We Started</h3>
+                    <p>It all started when we had no plans of opening a business at all. At the time, I had recently resigned from my job to heal from mental stress and emotional trauma, finding my only comfort in good food and quiet visits to local coffee shops.</p>
+                    <p>During this difficult season, my partner, Albert, lost his aunt. Money was incredibly tight, and we couldn't even afford to buy flowers for the wake. Looking at a fresh harvest of bananas we had at home, an idea sparked: why not bake banana muffins instead of buying flowers that would just wither away?</p>
+                    <a href="#" class="continue-btn">Continue Reading &rarr;</a>
+                </div>
+                <div class="story-image">
+                    <img src="assets/images/ourstory/lookingahead.png" alt="The Start">
+                </div>
+            </section>
+
+            <section class="story-section">
+                <div class="story-content">
+                    <h3>Looking Ahead</h3>
+                    <p>As our journey continues, we are constantly reminded of how much we have yet to learn. Building this from the ground up has brought a steep learning curve, and we are the first to admit that we've had our share of shortcomings along the way. We realized that while having a product that people love is a beautiful foundation, running and sustaining a business requires so much more.</p>
+                    <a href="#" class="continue-btn">Continue Reading &rarr;</a>
+                </div>
+                <div class="story-image">
+                    <img src="assets/images/ourstory/ourjourney.png" alt="Future">
+                </div>
+            </section>
+
         </div>
-
-        <section class="story-section">
-            <div class="story-content">
-                <h3>Our Journey to Bake 'n Slurp</h3>
-                <p>Our path wasn't a straight line. We started at home with a beverage concept called "D'stressitea..."</p>
-                <a href="#" class="continue-btn">Continue Reading &rarr;</a>
+            <div id="storyModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&#8617;</span>
+                    
+                    <div id="modal-body">
+                        <img id="modal-img" src="" alt="Story Image">
+                        <h2 id="modal-title">Story Title</h2>
+                        <div id="modal-desc"></div>
+                    </div>
+                </div>
             </div>
-            <div class="story-image">
-                <img src="images/truck.jpg" alt="Mobile Shop">
-            </div>
-        </section>
-
-        <section class="story-section reverse">
-            <div class="story-content">
-                <h3>How We Started</h3>
-                <p>It all started when we had no plans of opening a business at all. At the time, I had recently resigned...</p>
-                <a href="#" class="continue-btn">Continue Reading &rarr;</a>
-            </div>
-            <div class="story-image">
-                <img src="images/starting.jpg" alt="The Start">
-            </div>
-        </section>
-
-        <section class="story-section">
-            <div class="story-content">
-                <h3>Looking Ahead</h3>
-                <p>As our journey continues, we are constantly reminded of how much we have yet to learn...</p>
-                <a href="#" class="continue-btn">Continue Reading &rarr;</a>
-            </div>
-            <div class="story-image">
-                <img src="images/shop-front.jpg" alt="Future">
-            </div>
-        </section>
     </main>
+
     <bake-footer></bake-footer>
-    </body>
+    <script src="our-story.js"></script>
+</body>
 </html>

@@ -30,6 +30,8 @@ body {
     line-height: 1.6;
     background-image: url('assets/images/backgroundpicture/bg.jpg');
     
+    /* ADD THIS LINE TO FIX THE SCROLLING BUG! */
+    overflow-x: hidden; 
 }
 
 a { text-decoration: none; color: inherit; }
@@ -59,9 +61,10 @@ header {
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
+
 .logo img { 
     height: 60px; 
-    margin-bottom: 15px; 
+    margin-bottom: 10px; 
 }
 
 .background-nav img {
@@ -134,7 +137,7 @@ footer ul li a:hover { color: #fff; text-decoration: underline; }
     border: 6px solid #cccccc; /* Light gray track */
     border-top-color: var(--primary-dark); /* Dark spinning part */
     border-radius: 50%;
-    animation: spin 1s linear infinite;
+    animation: spin 0.5s linear infinite;
 }
 
 @keyframes spin {
