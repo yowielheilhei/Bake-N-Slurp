@@ -145,3 +145,31 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.overflow = "auto";
     });
 });
+
+
+// ==========================================
+// Auto-Select Category from Homepage Link
+// ==========================================
+document.addEventListener("DOMContentLoaded", function() {
+    
+    // 1. Look at the web address and grab the secret "?category=" word
+    const urlParams = new URLSearchParams(window.location.search);
+    const targetCategory = urlParams.get('category');
+
+    // 2. If a category word exists in the URL...
+    if (targetCategory) {
+        
+        // 3. Find all the clickable category links in your menu sidebar
+        // (Assuming your menu css uses .sidebar ul li for the categories)
+        const sidebarLinks = document.querySelectorAll('.sidebar ul li');
+        
+        sidebarLinks.forEach(link => {
+            // 4. If the sidebar text matches the secret word (e.g., "Sandwiches" matches "sandwiches")
+            if (link.innerText.toLowerCase().includes(targetCategory.toLowerCase())) {
+                
+                // Automatically "click" that category for the user!
+                link.click(); 
+            }
+        });
+    }
+});
