@@ -13,63 +13,77 @@ const SERVICES_DATA = [
       title: "Pasabuy",
       image: "assets/images/services/service1.png", 
       alt: "Ube cheese donuts",
-      shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+      shortDesc: "Hand-carried delivery of premium, cream-filled Ube sugar donuts.",
       longDesc: `
-        <p>As our journey continues, we are constantly reminded of how much we have yet to learn. Building this from the ground up has brought a steep learning curve, and we are the first to admit that we've had our share of shortcomings along the way. We realized that while having a product that people love is a beautiful foundation, running and sustaining a business requires so much more.</p>
-        <p>Today, we take every single challenge and lapse as a vital lesson. We took a step back to absorb these experiences, using them to make our foundation stronger. We are committed to growing, adapting, and constantly improving behind the scenes so we can overcome future hurdles.</p>
-        <p>Whether we are delivering pastries to your doorstep or planning our next big step, our promise remains the exact same: to provide the comforting food and drinks that our ever-growing Bake 'n Slurp family deserves. Thank you for staying with us through every chapter of our story.</p>
-      `
+        <p>This service sources and delivers popular, freshly baked purple Ube donuts stuffed with rich cream cheese filling directly to your home.</p>
+        <p>It is a hassle-free way to enjoy famous regional treats without traveling or waiting in long lines.</p>
+        `
     },
     {
       id: 2,
       title: "Custom Pastry Boxes",
       image: "assets/images/services/service2.png",
       alt: "Golden cream-filled pastries in a box",
-      shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-      longDesc: "<p>Details about pastry boxes go here. You can add multiple paragraphs just like the first example.</p>"
+      shortDesc: "Baker's choice boxes of pillowy, custard-filled brioche donuts.",
+      longDesc: `
+        <p>These boxes feature golden, sugar-dusted donuts packed with smooth and creamy vanilla custard</p>
+        <p>Perfect for sharing with family, bringing to parties, or gifting to fellow dessert lovers.</p>
+      `
     },
     {
       id: 3,
-      title: "Flowers for Sale",
+      title: "Tart and Pastry Platters",
       image: "assets/images/services/service3.png",
       alt: "Baking cookies on a tray",
-      shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-      longDesc: "<p>Details about this service go here.</p>"
+      shortDesc: "Delicate, artisanal tartlets  topped with a buttery streusel",
+      longDesc: `
+        <p>Our pastry platters feature bite-sized tartlets baked to a flawless golden-brown crisp and topped with an irresistible, crumbly streusel.</p>
+        <p>Beautifully arranged and ready to serve, they are the ideal centerpieces for your meetings, parties, or weekend brunches.</p>
+      `
+        
     },
     {
         id: 4,
-        title: "Service",
+        title: "Premium Floral Bouquets",
         image: "assets/images/services/service4.png",
         alt: "Flower arrangement",
         shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        longDesc: "<p>Details about this service go here.</p>"
+        longDesc: `
+          <p>Brighten up someone's day with our masterfully curated flower arrangements, featuring rich colors and elegant wrapping.</p>
+          <p>Whether it is an anniversary, a graduation, or just a sweet surprise, these premium bouquets speak louder than words.</p>
+        `
     },
     {
         id: 5,
-        title: "Service",
+        title: "Assorted Gourmet Donut Boxes",
         image: "assets/images/services/service5.png",
         alt: "Donut box",
-        shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        longDesc: "<p>Details about this service go here.</p>"
+        shortDesc: "A curated box of premium, artisanal donuts featuring unique glazes and decadent toppings.",
+        longDesc:`
+          <p>Indulge in a handpicked selection of gourmet donuts featuring custom glazes, rich fillings, and unique flavor combinations.</p>
+          <p>Specially packaged to ensure freshness, these boxes bring the Ultimate donut-shop experience right to your dining table.</p>
+        `
     },
     {
         id: 6,
-        title: "Service",
+        title: "Authentic Buco Pie Delivery",
         image: "assets/images/services/service6.png",
-        alt: "Whole pie",
-        shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
-        longDesc: "<p>Details about this service go here.</p>"
+        alt: "Freshly baked authentic buco pie box",
+        shortDesc: "Freshly baked, authentic buco pie loaded with tender young coconut meat and a flaky crust.",
+        longDesc: `
+          <p>Enjoy the authentic flavor of traditional Filipino buco pie, loaded with thick layers of tender young coconut inside a buttery, flaky pastry crust.</p>
+          <p>We source these regional favorites fresh and handle delivery with absolute care, ensuring they arrive warm and satisfyingly crisp.</p>
+        `
     },
     {
         id: 7,
-        title: "Service",
+        title: "Fresh Flower Pop-Up",
         image: "assets/images/services/service7.png",
         alt: "Fresh flowers for sale",
-        shortDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim",
+        shortDesc: "Catch our vibrant pop-up stands featuring a beautiful selection of seasonal, hand-picked flowers.",
         longDesc: `
-        <p>As our journey continues, we are constantly reminded of how much we have yet to learn. Building this from the ground up has brought a steep learning curve, and we are the first to admit that we've had our share of shortcomings along the way. We realized that while having a product that people love is a beautiful foundation, running and sustaining a business requires so much more.</p>
-        <p>Today, we take every single challenge and lapse as a vital lesson. We took a step back to absorb these experiences, using them to make our foundation stronger. We are committed to growing, adapting, and constantly improving behind the scenes so we can overcome future hurdles.</p>
-        <p>Whether we are delivering pastries to your doorstep or planning our next big step, our promise remains the exact same: to provide the comforting food and drinks that our ever-growing Bake 'n Slurp family deserves. Thank you for staying with us through every chapter of our story.</p>
+          <p>Bring nature’s finest colors into your home with our seasonal, hand-picked flower pop-up markets setup directly in local communities.</p>
+          <p>Whether you are selecting individual stems to design your own arrangement or purchasing a pre-bundled bundle, we bring fresh, beautiful blooms closer to you.</p>
         `
     }
   ];

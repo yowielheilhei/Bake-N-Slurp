@@ -1,21 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
-
-/* home.css */
-.carousel { 
-    position: relative; 
-    text-align: center; 
-    color: white; 
-    overflow: hidden; 
+/* =========================================
+   Home / Carousel
+   ========================================= */
+.carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
-.carousel img { 
-    width: 100%; 
+.carousel-track {
+    position: relative;
+    width: 100%;
     height: 700px; 
-    object-fit: cover; 
-    display: block; 
 }
 
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* =========================================
+   Popular Right Now Section
+   ========================================= */
 .popular { 
     text-align: center; 
     color: white; 
@@ -34,18 +82,30 @@
     gap: 70px;
     margin-top: 20px;
     flex-wrap: wrap;
-    
 }
 
 .card {
     width: 300px;
     border-radius: 20px;
     overflow: hidden;
+    /* Added transition for smooth hover lift */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.4); 
 }
 
 .card img {
     width: 100%;
     height: 380px;
+    /* Added transition for smooth image zoom */
+    transition: transform 0.4s ease; 
+}
+
+.card:hover img {
+    transform: scale(1.08); 
 }
 
 .card p {
@@ -53,29 +113,79 @@
     font-size: 30px;
 }
 
-.story{
-    padding: 10px 130px ;
+/* =========================================
+   Story & Services Banners
+   ========================================= */
+.story {
+    padding: 10px 130px;
 }
 
 .story-banner {
     position: relative;
     top: 40px;
     text-align: center;
-    display:flex;
-    align-items:center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     margin-bottom: 30px;
 }
 
-.story-banner img {
+.services {
+    padding: 1px 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.services-banner {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-banner img,
+.services-banner img {
     border-radius: 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.story-banner img {
     height: 400px;
 }
 
+.services-banner img {
+    height: 410px;
+}
+
+/* Hover effects for both banners */
+.story-banner a:hover img,
+.services-banner a:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.services-banner p {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.7); 
+    z-index: 2;
+}
+
+/* =========================================
+   Categories Gallery
+   ========================================= */
 .categories-gallery {
     padding: 50px 12%;      
     display: flex;
     justify-content: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .gallery-grid {
@@ -85,7 +195,6 @@
     gap: 15px;                            
     width: 100%;
     max-width: 1120px;
-    
 }
 
 .gallery-grid > div {
@@ -99,27 +208,18 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    /* Added transition for smooth inner zoom */
+    transition: transform 0.5s ease;
 }
 
-.gallery-1 {
-    grid-row: span 2;
-    grid-column: 1;
+.gallery-grid > div:hover img {
+    transform: scale(1.1);
 }
 
-.gallery-2 {
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.gallery-4 {
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.gallery-3 {
-    grid-row: span 2;
-    grid-column: 3;
-}
+.gallery-1 { grid-row: span 2; grid-column: 1; }
+.gallery-2 { grid-column: 2; grid-row: 1; }
+.gallery-4 { grid-column: 2; grid-row: 2; }
+.gallery-3 { grid-row: span 2; grid-column: 3; }
 
 .gallery-grid p {
     position: absolute;
@@ -134,35 +234,44 @@
     z-index: 2;
 }
 
-.services {
-    padding: 1px 30%;
+/* =========================================
+   New 3-Banner Promotional Row
+   ========================================= */
+.promo-banners {
     display: flex;
     justify-content: center;
+    gap: 30px;
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.services-banner {
-    position: relative;
-    top: 10px;
-    text-align: center;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-
+.promo-banner-card {
+    flex: 1; 
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.services-banner img {
-    border-radius: 20px;
-    height: 410px;
+.promo-banner-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
 }
 
-.services-banner p {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    margin: 0;
-    color: #ffffff;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    text-shadow: 4px 2px 5px rgba(0, 0, 0, 0.7); 
-    z-index: 2;
+.promo-banner-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 900px) {
+    .promo-banners { flex-wrap: wrap; }
+    .promo-banner-card { min-width: 40%; }
+}
+
+@media (max-width: 600px) {
+    .promo-banners { flex-direction: column; }
+    .promo-banner-card { width: 100%; }
 }

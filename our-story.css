@@ -11,7 +11,7 @@
 
 .story-hero img {
     width: 100%;
-    height: auto; /* Keeps your image proportions perfect */
+    height: 700px; /* Keeps your image proportions perfect */
     display: block;
     
     /* This prevents the image from getting way too tall on giant desktop screens */

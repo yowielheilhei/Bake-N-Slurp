@@ -19,7 +19,7 @@
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    height: 400px; 
+    height: 700px; 
     margin-bottom: 40px;
     
     /* ADD YOUR IMAGE LINK HERE */
@@ -69,10 +69,13 @@
 }
 
 .sidebar {
+    position: sticky;
+    top: 100px;
+    align-self: start;
     background: #fdfdfd; 
     padding: 30px; 
     border-radius: 10px; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(77, 1, 1, 0.1);
     font-family: var(--font-body);
 }
 
@@ -80,7 +83,7 @@
 .sidebar hr { 
     margin: 20px 0; 
     border: none; 
-    border-top: 1px solid #eee; 
+    border-top: 2px solid #eee; 
 }
 
 .sidebar h3 { 
@@ -110,6 +113,7 @@
 .menu-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #eee; padding-bottom: 15px; margin-bottom: 30px; }
 .search-bar { padding: 10px 20px; border-radius: 25px; border: 1px solid #ccc; width: 250px; outline: none; }
 .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 40px 20px; text-align: center; }
+.product-tem { cursor: pointer; }
 .product-item img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
 
 @media (max-width: 768px) {
@@ -120,20 +124,18 @@
 @media (max-width: 480px) { .product-grid { grid-template-columns: 1fr 1fr; } }
 
 
-/* =========================================
-   Product Popup Styles
-   ========================================= */
 .prod-modal {
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 9999;
-    left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
-    /* Soft light gray gradient background */
-    background: linear-gradient(to bottom, #d8d8d8, #a8a8a8);
-    overflow-y: auto;
+    left: 0;
+    width: min(700px, 90vw);
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    pointer-events: auto;
 }
 
 /* The dark top bar */
@@ -144,7 +146,7 @@
     display: flex;
     align-items: center;
     padding: 0 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 .close-prod-modal {
@@ -160,20 +162,14 @@
 }
 
 /* Side-by-side layout container */
-/* Side-by-side layout container with strict dimensions */
 .prod-modal-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
-    /* --- YOUR NEW STRICT DIMENSIONS --- */
-    width: 1000px;
-    height: 800px;
-    /* Safety net so it still works on mobile screens */
-    max-width: 95%; 
-    
-    margin: 20px auto;
-    padding: 20px;
+    gap: 40px;
+    width: 100%;
+    height: auto;
+    padding: 30px;
 }
 
 .prod-modal-left, .prod-modal-right {
@@ -182,10 +178,9 @@
 
 .prod-modal-left img {
     width: 100%;
-    max-width: 450px;
-    /* Force the image to be taller to match your new 800px popup height! */
-    height: 600px; 
-    border-radius: 10px;
+    max-width: 320px;
+    height: 320px;
+    border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     object-fit: cover;
 }

@@ -1,1 +1,2 @@
-# Bake-N-Slurp
+# Semestral-Proj
+Bake 'n Slurp Website
